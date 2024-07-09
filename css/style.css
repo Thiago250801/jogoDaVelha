@@ -1,0 +1,110 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+  }
+  
+  body{
+    text-align: center;
+    width: 100vw;
+    height: 70vh;
+    background-color: #2f3542;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container-jogadores{
+    width: 170px;
+    height: 70px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
+  .align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-jogadores h3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+  }
+
+  .container-jogadores .turn-box{
+    border: 3px solid #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .container-jogadores .turn-box:nth-child(even){
+    border-right: none;
+  }
+
+  .bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #FF2E63;
+    z-index: -1;
+}
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+  }
+
+
+  
+  .box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #e70d31;
+    box-shadow: 0 0 0 2px #e70d31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    font-size: 25px;
+  }
+
+
+  
+  #status{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  button{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    color:white;
+    background-color: #ff4757;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .win{
+      animation: winAnimation ease-in-out 1s infinite;
+  }
+  
+  @keyframes winAnimation {
+    0%{background-color: #389746;}
+    100%{background-color: #0c4724;}
+    
+  }
